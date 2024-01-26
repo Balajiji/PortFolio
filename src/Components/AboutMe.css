@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Black+Ops+One&family=Merienda:wght@700&family=Russo+One&display=swap');
+
+.about{
+    background-color: black;
+    color:'yellow';
+     font-family: 'Merienda', cursive;
+}
+
+.qu{
+    text-decoration-line: underline;
+    text-decoration-color: #ffcc00;
+}
+.an{
+    margin-left: 15px;
+}
+.bo{
+    font-family: 'Merienda', cursive;
+}
