@@ -3,3 +3,25 @@
     text-decoration: none;
     color: yellow;
 }
+
+.dd {
+    position: relative; 
+    text-decoration: none;
+    padding: 0.5rem;
+    color: inherit; 
+}
+
+.dd::after {
+    margin-bottom: 2rem;
+    content: '';
+    display: flex;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: all 0.5s ease;
+}
+
+.dd:hover::after {
+    width: 100%;
+    background-color: #ffcc00;
+}
