@@ -8,3 +8,41 @@
      font-family: 'Merienda', cursive;
     /* font-family: 'Russo One', sans-serif;  */
 }
+
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  span{
+    transition-delay: 4s;
+  }
+  .typewriter {
+    overflow: hidden;
+    display: inline-block;
+    animation: typing 4s steps(35, end) forwards; /* Adjust the duration and steps based on your preference */
+    white-space: nowrap;
+  }
+  
+
+
+
+   .abt{
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 3s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
