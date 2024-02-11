@@ -1,18 +1,28 @@
 import React from 'react'
 import { NavBar } from './NavBar'
-import {Container,Row,Col} from 'react-bootstrap'
+import {Container,Row,Col,Button} from 'react-bootstrap'
 import '../Components/Resume.css'
 export const Resume = () => {
+  const handleDownload=()=> {const resumeFilePath = './Resume.pdf'; 
+  const link = document.createElement('a');
+
+  link.href = resumeFilePath;
+  link.download =  './Resume.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
   return (
       <>
-      <div className='bo' style={{height:'100%',backgroundColor:'black'}}>
+      <div className='bo' style={{height:'190vh',backgroundColor:'black',overflow:'hidden'}}>
         <NavBar/>
         <Container fluid className='mb-5'>
 
-        </Container>
-        <Row className='mb-3  '>
+       
+        <Row className=' mt-5 mb-3  '>
           <Col className='col-1'></Col>
           <Col className='col-6 tt text-start'><h4>CAREER OBJECTIVE</h4></Col>
+          <Col className='col-5 text-start'><Button variant="outline-warning" style={{marginLeft:'8px'}} onClick={handleDownload}>Download Resume</Button></Col>
         </Row>
         <Row className='mb-3'>
           <Col className='col-1'></Col>
@@ -47,7 +57,9 @@ export const Resume = () => {
           <Col className='col-5 text-start text-white'><h4 className='tt'>LANGUAGES KNOWN</h4><ul className='mt-3'><li><p>ENGLISH</p></li><li><p>TAMIL</p></li></ul></Col>
           <Col className='col-5 text-start text-white '><h4 className='tt '>AREA OF INTEREST</h4><ul><li><p className='mt-3'>Web Development</p></li></ul></Col>
         </Row>
+      
+        </Container>
       </div>
       </>
   )
-}
+  }
