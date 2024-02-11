@@ -10,3 +10,8 @@
 .bo{
     font-family: 'Merienda', cursive;
 }
+
+
+::-webkit-scrollbar{
+    width:0;
+}
