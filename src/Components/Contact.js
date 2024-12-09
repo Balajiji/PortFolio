@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavBar} from './NavBar'
 import { Container,Col,Row,Button } from 'react-bootstrap'
-import '../Components/Contact.css'
+// import '../Components/Contact.css'
 
 import { toast } from 'react-toastify'
 export const Contact = () => {
