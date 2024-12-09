@@ -5,15 +5,15 @@ import '../Components/Home.css';
 import { FaInstagram ,FaLinkedin,FaFacebook, FaTwitter} from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 export const Home = () => {
-  const handleDownload=()=> {const resumeFilePath = './Resume.pdf'; 
-  const link = document.createElement('a');
+//   const handleDownload=()=> {const resumeFilePath = './Resume.pdf'; 
+//   const link = document.createElement('a');
 
-  link.href = resumeFilePath;
-  link.download =  './Resume.pdf';
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-};
+//   link.href = resumeFilePath;
+//   link.download =  './Resume.pdf';
+//   document.body.appendChild(link);
+//   link.click();
+//   document.body.removeChild(link);
+// };
   return (
    <>
    <div className='bb' style={{height:'100vh'}}>
@@ -25,7 +25,7 @@ export const Home = () => {
         <div className='abt'>
         <div style={{marginTop:'30px'}}>
           <Button variant="outline-warning">Hire Me</Button>
-          <Button variant="outline-warning" style={{marginLeft:'8px'}} onClick={handleDownload}>Download Resume</Button>
+          <Button variant="outline-warning" style={{marginLeft:'8px',color:"#ffcc00" }}> <Link to={'https://drive.google.com/file/d/1sJKjiQQQl0YI_CV4pMJGUXuPI8S5O5fT/view?usp=sharing'} style={{textDecoration:'none' ,color:"#ffcc00"}}> Download Resume  </Link></Button>
         </div>
         <div style={{marginTop:'20px'}}> <Link to={'https://www.instagram.com/mr__green82/?hl=en'} style={{textDecoration:'none'}}><FaInstagram size={40} color="#ffcc00" />  </Link>   <Link to={'https://www.linkedin.com/in/balaji-i-27496a214/'}><FaLinkedin size={40} color="#ffcc00" /></Link>  <FaTwitter size={40} color="#ffcc00" />  <Link to={'https://www.facebook.com/theribalaji.theribalaji.10'}><FaFacebook size={40} color="#ffcc00" /></Link> 
 </div> 
